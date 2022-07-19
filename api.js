@@ -1,9 +1,10 @@
 let emp = [{name:'Aman', job:'SDE', salary:1000}]
-function addEmployee(employee){
+function addEmployee(employee,jingalala){
   console.log('adding Employee')
   setTimeout(() => {
     emp.push(employee);
     console.log('Employee Added')
+    jingalala()
   }, 2000);
 }
 

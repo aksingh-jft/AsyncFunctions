@@ -19,9 +19,13 @@ function showConsole(employees){
   console.log(employees)
 }
 function show(employees){
+  document.getElementById('table').innerHTML = ''
   employees.map((emp)=>{
-    document.getElementById('table').innerHTML = (
+    document.getElementById('table').innerHTML = document.getElementById('table').innerHTML +
       `<tr><td>${emp.name}</td><td>${emp.job}</td><td>${emp.salary}</td></tr>`
-     )
   })
 };
+function add(){
+  const employee = {name:document.getElementById('name').value, job:document.getElementById('job').value, salary:document.getElementById('salary').value}
+  addEmployee(employee, showInTable)
+}
