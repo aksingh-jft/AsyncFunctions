@@ -16,10 +16,20 @@ function addEmployee(employee,jingalala){
 //   }, 1000);
 // }
 
+// function getEmployees(callback){
+//   console.log('Fetching Employees')
+//   setTimeout(() => {
+//     console.log('Fetched')
+//     callback(emp)
+//   }, 1000);
+// }
+
 function getEmployees(callback){
-  console.log('Fetching Employees')
-  setTimeout(() => {
-    console.log('Fetched')
-    callback(emp)
-  }, 1000);
+  return new Promise((resolve, reject)=>{
+    console.log('Fetching Employees')
+    setTimeout(() => {
+      console.log('Fetched')
+      reject('ERR');
+    }, 1000);
+  })
 }
