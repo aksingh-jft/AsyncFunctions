@@ -34,10 +34,22 @@
 function showConsole(employees){
     console.log(employees)
   }
-function showInConsole(){
-    getEmployees().then((employees)=>{
+  // PROMISES
+// function showInConsole(){
+//     getEmployees().then((employees)=>{
+//       showConsole(employees) 
+//     }).catch((err)=>{
+//       console.log(err)
+//     })
+//   }
+// ASYNC AWAIT
+async function showInConsole(){
+    try{
+      const employees  = await getEmployees()
       showConsole(employees)
-    }).catch((err)=>{
-      console.log(err)
-    })
-  }
+    }catch(err){
+      console.log(err);
+    }  
+}
+
+showInConsole()
